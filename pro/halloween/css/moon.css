@@ -1,0 +1,57 @@
+#moon-hoverable {
+    width: 20vh;
+    height: 20vh;
+    top: 25vh;
+    left: 65vh;
+    z-index: 1;
+}
+
+#moon1-container {
+    transition: top 1s ease-out;
+    width: 20vh;
+    height: 20vh;
+    top: 25vh;
+    left: 65vh;
+}
+
+#moon1 {
+    transition: left 1s ease-in, opacity 1s;
+    width: 20vh;
+    left: 0;
+}
+
+#moon2-container {
+    transition: top 1s ease-in;
+    width: 20vh;
+    height: 20vh;
+    top: 80vh;
+}
+
+#moon2 {
+    transition: left 1s ease-out, opacity 1s;
+    width: 20vh;
+    left: 0;
+    opacity: 0;
+}
+
+main:has(#moon-hoverable:hover) #moon1-container {
+    transition: top 1s ease-in;
+    top: 80vh;
+}
+
+main:has(#moon-hoverable:hover) #moon1-container #moon1 {
+    transition: left 1s ease-out, opacity 1s;
+    left: 69vh;
+    opacity: 0;
+}
+
+main:has(#moon-hoverable:hover) #moon2-container {
+    transition: top 1s ease-out;
+    top: 25vh;
+}
+
+main:has(#moon-hoverable:hover) #moon2-container #moon2 {
+    transition: left 1s ease-in, opacity 1s;
+    left: 65vh;
+    opacity: 1;
+}

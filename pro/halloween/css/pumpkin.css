@@ -1,0 +1,11 @@
+#pumpkin_light {
+    width: 25vh;
+    top: 79vh;
+    left: 98vh;
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+#pumpkin_light:hover {
+    opacity: 1;
+}
