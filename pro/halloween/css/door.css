@@ -1,0 +1,57 @@
+#door-hoverable {
+    width: 13vh;
+    height: 16vh;
+    top: 71vh;
+    left: 21.75vh;
+    z-index: 3;
+}
+
+#door1, #door2 {
+    width: 6.5vh;
+    top: 71vh;
+    left: 21.75vh;
+    transition: transform .5s linear;
+    z-index: 2;
+}
+
+#door2 {
+    left: 28.25vh;
+}
+
+#dance {
+    width: 12vh;
+    top: 77vh;
+    left: 22.25vh;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+main:has(#door-hoverable:hover) #door1 {
+    transform: rotateY(90deg)
+}
+
+main:has(#door-hoverable:hover) #door2 {
+    transform: rotateY(90deg)
+}
+
+main:has(#door-hoverable:hover) #door1-container {
+    transform: translateX(-3.25vh);
+    transition: transform .5s ease-in;
+}
+
+main:has(#door-hoverable:hover) #door2-container {
+    transform: translateX(3.25vh);
+    transition: transform .5s ease-in;
+}
+
+main:has(#door-hoverable:hover) #dance {
+    opacity: 1;
+}
+
+main:has(#door-hoverable:not(:hover)) #door1-container {
+    transition: transform .5s ease-out;
+}
+
+main:has(#door-hoverable:not(:hover)) #door2-container {
+    transition: transform .5s ease-out;
+}

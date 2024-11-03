@@ -50,3 +50,8 @@ main * {
     position: inherit;
     height: 100vh;
 }
+
+#front, #tree {
+    height: 100vh;
+    z-index: 2;
+}

@@ -1,0 +1,36 @@
+#eye, #shadow {
+    z-index: 4;
+}
+
+#eye-container {
+    top: 90vh;
+    left: 15vh;
+    transition: left 1s ease-out;
+}
+
+#eye {
+    width: 6vh;
+    transition: transform 1s ease-out;
+}
+
+#shadow {
+    width: 11vh;
+    top: 5vh;
+    left: -2vh;
+}
+
+#eye-hoverable {
+    width: 10vh;
+    height: 8vh;
+    top: 90vh;
+    left: 15vh;
+    z-index: 5;
+}
+
+main:has(#eye-hoverable:hover) #eye-container {
+    left: -10vh;
+}
+
+main:has(#eye-hoverable:hover) #eye {
+    transform: rotate(-360deg);
+}

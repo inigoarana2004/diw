@@ -4,6 +4,7 @@
     left: 98vh;
     transition: opacity 1s;
     opacity: 0;
+    z-index: 3;
 }
 
 #pumpkin_light:hover {
